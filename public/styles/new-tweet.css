@@ -1,0 +1,28 @@
+label {
+  font-weight: 600;
+}
+
+textarea {
+  background-color: #f4f1ec;
+  border-style: none;
+}
+
+.input-top {
+  border-bottom-style: solid;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+} 
+
+.input-bottom {
+  font-family: 'Bungee', cursive;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  color: #fff;
+  background-color: #4056A1;
+}
