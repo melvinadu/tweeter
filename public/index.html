@@ -24,6 +24,9 @@
      <!-- New Tweet CSS -->
      <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+     <!-- Tweet List CSS -->
+     <link rel="stylesheet" href="/styles/tweet-list.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -47,7 +50,7 @@
       </div>
     </nav>
 
-    <header>
+    <header class="profile-header">
       <div class="profile image">
           <img src="/images/profile-hex.png"> 
       </div>
@@ -58,6 +61,9 @@
   </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <!-- New Tweet Submission -->
+
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="post" action="/tweets">
@@ -71,6 +77,44 @@
           </div>
         </form>
       </section>
+
+      <!-- List of Tweets -->
+      <section class="tweet">
+        <article>
+          <header class="tweet-header">
+            <div>Newton</div>
+            <div class="handle">@SirIssac</div>
+          </header>
+          <p>If I have seen further, it is by standing on the shoulders of giants</p>
+          <footer class="tweet-footer">
+            <div>Date</div>
+            <div class="icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
+
+      <section class="tweet">
+        <article>
+          <header class="tweet-header">
+            <div>Newton</div>
+            <div class="handle">@SirIssac</div>
+          </header>
+          <p>If I have seen further, it is by standing on the shoulders of giants</p>
+          <footer class="tweet-footer">
+            <div>Date</div>
+            <div class="icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
+
     </main>
 
   </body>

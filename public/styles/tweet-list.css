@@ -1,0 +1,36 @@
+.tweet {
+  border-style: solid;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweet-footer {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 5px solid;
+  padding: 6px 0;
+}
+
+.icons {
+  color: #4056A1;
+}
+
+.fa-flag:hover {
+  color: #a19a40;
+}
+
+.fa-retweet:hover {
+  color: #a19a40;
+}
+
+.fa-heart:hover {
+  color: #a19a40;
+}
