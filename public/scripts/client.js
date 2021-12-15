@@ -72,11 +72,21 @@ const $form = $('#new-tweet-form');
 
 $form.submit(function(event) {
   event.preventDefault();
-
   const serializedData = $(this).serialize();
+  console.log(serializedData);
+
+  if (serializedData === "text=") {
+    alert("You have not inputted a tweet! Please find something to tweet about!");
+  }
   
+  if (serializedData.length >= 141) {
+    alert("Your tweet is longer than 140 characters");
+  }
+
   $.post('/tweets', serializedData, (response) => {
   })
+
+  loadTweets();
 
 });
 
