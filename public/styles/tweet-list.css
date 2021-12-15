@@ -25,12 +25,20 @@
 
 .fa-flag:hover {
   color: #a19a40;
+  box-shadow:dimgray;
 }
 
 .fa-retweet:hover {
   color: #a19a40;
+  box-shadow:dimgray;
 }
 
 .fa-heart:hover {
   color: #a19a40;
+  box-shadow:dimgray;
+}
+
+.handle {
+  color: #4056A1;
+  opacity: 0.3;
 }
