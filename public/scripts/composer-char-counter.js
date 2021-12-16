@@ -2,7 +2,6 @@ $(document).ready(function() {
   // --- our code goes here ---
   $('#tweet-text').on('input', function() {
     //declaring variable we will keep count of text box characters with
-
     let currentCount = 140;
 
     //traverse up the DOM tree and find the node with class of counter

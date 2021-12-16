@@ -97,7 +97,6 @@ $form.submit(function(event) {
     error.slideDown();
   }
 
-
   $.post('/tweets', serializedData, (response) => {
   })
 
