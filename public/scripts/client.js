@@ -31,6 +31,13 @@ $(document).ready(function() {
     }
   ]
 
+  //escape function
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   const createTweetElement = (tweet) => {
     const $tweet = $(`<article>`).addClass('tweet');
 
@@ -38,7 +45,7 @@ $(document).ready(function() {
         <div>${tweet.user.name}</div>
         <div class="handle">${tweet.user.handle}</div>
       </header>
-      <p>${tweet.content.text}</p>
+      <p>${escape(tweet.content.text)}</p>
       <footer class="tweet-footer">
         <div>${timeago.format(tweet.created_at)}</div>
         <div class="icons">
@@ -66,22 +73,30 @@ const renderTweets = function(tweets) {
   }
 }
 
-// renderTweets(tweetData);
+//hide error message after loading
+const error = $(".error-message");
+error.hide();
 
 const $form = $('#new-tweet-form');
-
 $form.submit(function(event) {
   event.preventDefault();
   const serializedData = $(this).serialize();
   console.log(serializedData);
+  
+  error.slideUp();
 
   if (serializedData === "text=") {
-    alert("You have not inputted a tweet! Please find something to tweet about!");
+    const errorMessage = $(".error-text");
+    errorMessage.text("You have not inputted a tweet! Please find something to tweet about!");
+    error.slideDown();
   }
   
   if (serializedData.length >= 141) {
-    alert("Your tweet is longer than 140 characters");
+    const errorMessage = $(".error-text");
+    errorMessage.text("Your tweet is longer than 140 characters");
+    error.slideDown();
   }
+
 
   $.post('/tweets', serializedData, (response) => {
   })

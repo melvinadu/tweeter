@@ -62,13 +62,18 @@
           <h2>Your Name</h2>
       </div>
   </header>
+
     <!-- Page-specific (main) content here -->
     <main class="container">
 
-      <!-- New Tweet Submission -->
+       <!-- Basic Error Message -->
+       <div class="error-message">
+        <span class="error-text"></span>
+      </div>  
 
+      <!-- New Tweet Submission -->
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+      <div>
         <form id="new-tweet-form" method="post" action="/tweets">
         <div class="input-top">
           <label for="tweet-text">What are you humming about?</label>
@@ -79,30 +84,13 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </div>
       </section>
 
       <!-- List of Tweets -->
         <div id="tweets">
 
         </div>
-        <!-- <article class="tweet">
-          <header class="tweet-header">
-            <div>Newton</div>
-            <div class="handle">@SirIssac</div>
-          </header>
-          <p>If I have seen further, it is by standing on the shoulders of giants</p>
-          <footer class="tweet-footer">
-            <div>Date</div>
-            <div class="icons">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </footer>
-        </article> -->
-    
-
-
     </main>
 
   </body>
