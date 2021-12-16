@@ -18,3 +18,9 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 - Chance
 - Body-parser
+
+## Screenshots
+
+!["screenshot of application in desktop view"](https://github.com/melvinadu/tweeter/blob/master/docs/tweet-desktop.png)
+
+!["screenshot of application in mobile view"](https://github.com/melvinadu/tweeter/blob/master/docs/tweet-mobile.png)
