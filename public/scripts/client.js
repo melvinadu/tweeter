@@ -42,7 +42,11 @@ $(document).ready(function() {
     const $tweet = $(`<article>`).addClass('tweet');
 
     let html = `<header class="tweet-header">
-        <div>${tweet.user.name}</div>
+        
+        <div>
+          <img src=${(tweet.user.avatars)}>
+          ${tweet.user.name}
+        </div>
         <div class="handle">${tweet.user.handle}</div>
       </header>
       <p>${escape(tweet.content.text)}</p>
