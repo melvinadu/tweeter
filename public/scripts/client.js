@@ -91,16 +91,15 @@ $form.submit(function(event) {
     error.slideDown();
   }
   
-  if (serializedData.length >= 141) {
+  if (serializedData.length > 140) {
     const errorMessage = $(".error-text");
     errorMessage.text("Your tweet is longer than 140 characters");
     error.slideDown();
   }
 
   $.post('/tweets', serializedData, (response) => {
+    loadTweets();
   })
-
-  loadTweets();
 
 });
 

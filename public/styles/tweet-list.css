@@ -4,6 +4,10 @@
   margin: 16px 0;
 }
 
+.tweet:hover {
+  box-shadow:dimgray;
+}
+
 .tweet-header {
   display: flex;
   flex-direction: row;
