@@ -97,8 +97,9 @@ $form.submit(function(event) {
   
   if (serializedData.length > 140) {
     const errorMessage = $(".error-text");
-    errorMessage.text("Your tweet is longer than 140 characters");
+
     error.slideDown();
+    return errorMessage.text("Your tweet is longer than 140 characters");
   }
 
   $.post('/tweets', serializedData, (response) => {
